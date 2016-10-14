@@ -22,5 +22,5 @@ limitations under the License.
 =end
 
 module functions_ruby
-  VERSION = "0.0.2"
+  VERSION = "0.0.3"
 end
