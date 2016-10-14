@@ -1,4 +1,4 @@
-# IronFunctions::RouteWrapper
+# functions_ruby::RouteWrapper
 
 ## Properties
 Name | Type | Description | Notes

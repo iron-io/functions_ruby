@@ -1,4 +1,4 @@
-# IronFunctions::Error
+# functions_ruby::Error
 
 ## Properties
 Name | Type | Description | Notes

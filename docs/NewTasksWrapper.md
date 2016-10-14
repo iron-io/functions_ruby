@@ -1,4 +1,4 @@
-# IronFunctions::NewTasksWrapper
+# functions_ruby::NewTasksWrapper
 
 ## Properties
 Name | Type | Description | Notes

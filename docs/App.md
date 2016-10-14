@@ -1,4 +1,4 @@
-# IronFunctions::App
+# functions_ruby::App
 
 ## Properties
 Name | Type | Description | Notes
