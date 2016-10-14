@@ -1,4 +1,4 @@
-# functions_ruby::Route
+# IronFunctions::Route
 
 ## Properties
 Name | Type | Description | Notes

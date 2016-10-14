@@ -23,14 +23,14 @@ limitations under the License.
 
 require 'spec_helper'
 
-describe functions_ruby::Configuration do
-  let(:config) { functions_ruby::Configuration.default }
+describe IronFunctions::Configuration do
+  let(:config) { IronFunctions::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     #require 'URI'
     #uri = URI.parse("https://127.0.0.1:8080/v1")
-    #functions_ruby.configure do |c|
+    #IronFunctions.configure do |c|
     #  c.host = uri.host
     #  c.base_path = uri.path
     #end

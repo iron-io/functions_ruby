@@ -1,4 +1,4 @@
-# functions_ruby::Task
+# IronFunctions::Task
 
 ## Properties
 Name | Type | Description | Notes

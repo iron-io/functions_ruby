@@ -1,4 +1,4 @@
-# functions_ruby::AppWrapper
+# IronFunctions::AppWrapper
 
 ## Properties
 Name | Type | Description | Notes

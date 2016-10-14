@@ -1,4 +1,4 @@
-# functions_ruby::RoutesApi
+# IronFunctions::RoutesApi
 
 All URIs are relative to *https://127.0.0.1:8080/v1*
 
@@ -20,9 +20,9 @@ This will list routes for a particular app.
 ### Example
 ```ruby
 # load the gem
-require 'functions_ruby'
+require 'iron_functions'
 
-api_instance = functions_ruby::RoutesApi.new
+api_instance = IronFunctions::RoutesApi.new
 
 app = "app_example" # String | Name of app for this set of routes.
 
@@ -31,7 +31,7 @@ begin
   #Get route list by app name.
   result = api_instance.apps_app_routes_get(app)
   p result
-rescue functions_ruby::ApiError => e
+rescue IronFunctions::ApiError => e
   puts "Exception when calling RoutesApi->apps_app_routes_get: #{e}"
 end
 ```
@@ -67,20 +67,20 @@ Create a new route
 ### Example
 ```ruby
 # load the gem
-require 'functions_ruby'
+require 'iron_functions'
 
-api_instance = functions_ruby::RoutesApi.new
+api_instance = IronFunctions::RoutesApi.new
 
 app = "app_example" # String | name of the app.
 
-body = functions_ruby::NewRoutesWrapper.new # NewRoutesWrapper | Array of routes to post.
+body = IronFunctions::NewRoutesWrapper.new # NewRoutesWrapper | Array of routes to post.
 
 
 begin
   #Create new Route
   result = api_instance.apps_app_routes_post(app, body)
   p result
-rescue functions_ruby::ApiError => e
+rescue IronFunctions::ApiError => e
   puts "Exception when calling RoutesApi->apps_app_routes_post: #{e}"
 end
 ```
@@ -117,9 +117,9 @@ Deletes the route.
 ### Example
 ```ruby
 # load the gem
-require 'functions_ruby'
+require 'iron_functions'
 
-api_instance = functions_ruby::RoutesApi.new
+api_instance = IronFunctions::RoutesApi.new
 
 app = "app_example" # String | Name of app for this set of routes.
 
@@ -129,7 +129,7 @@ route = "route_example" # String | Route name
 begin
   #Deletes the route
   api_instance.apps_app_routes_route_delete(app, route)
-rescue functions_ruby::ApiError => e
+rescue IronFunctions::ApiError => e
   puts "Exception when calling RoutesApi->apps_app_routes_route_delete: #{e}"
 end
 ```
@@ -166,9 +166,9 @@ Gets a route by name.
 ### Example
 ```ruby
 # load the gem
-require 'functions_ruby'
+require 'iron_functions'
 
-api_instance = functions_ruby::RoutesApi.new
+api_instance = IronFunctions::RoutesApi.new
 
 app = "app_example" # String | Name of app for this set of routes.
 
@@ -179,7 +179,7 @@ begin
   #Gets route by name
   result = api_instance.apps_app_routes_route_get(app, route)
   p result
-rescue functions_ruby::ApiError => e
+rescue IronFunctions::ApiError => e
   puts "Exception when calling RoutesApi->apps_app_routes_route_get: #{e}"
 end
 ```

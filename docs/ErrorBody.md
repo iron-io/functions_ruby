@@ -1,4 +1,4 @@
-# functions_ruby::ErrorBody
+# IronFunctions::ErrorBody
 
 ## Properties
 Name | Type | Description | Notes

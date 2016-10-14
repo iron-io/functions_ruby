@@ -1,4 +1,4 @@
-# functions_ruby::TasksApi
+# IronFunctions::TasksApi
 
 All URIs are relative to *https://127.0.0.1:8080/v1*
 
@@ -17,9 +17,9 @@ Gets the next task in the queue, ready for processing. Titan may return <=n task
 ### Example
 ```ruby
 # load the gem
-require 'functions_ruby'
+require 'iron_functions'
 
-api_instance = functions_ruby::TasksApi.new
+api_instance = IronFunctions::TasksApi.new
 
 opts = { 
   n: 1 # Integer | Number of tasks to return.
@@ -29,7 +29,7 @@ begin
   #Get next task.
   result = api_instance.tasks_get(opts)
   p result
-rescue functions_ruby::ApiError => e
+rescue IronFunctions::ApiError => e
   puts "Exception when calling TasksApi->tasks_get: #{e}"
 end
 ```
