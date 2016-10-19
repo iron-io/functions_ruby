@@ -23,12 +23,12 @@ limitations under the License.
 
 =end
 
-$:.push File.expand_path("../lib", __FILE__)
-require "functions_ruby/version"
+# $:.push File.expand_path("lib", __FILE__)
+require_relative "lib/functions_ruby/version"
 
 Gem::Specification.new do |s|
   s.name        = "functions_ruby"
-  s.version     = functions_ruby::VERSION
+  s.version     = IronFunctions::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
   s.email       = ["travis@iron.io"]
