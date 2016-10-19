@@ -25,30 +25,27 @@ require 'date'
 
 module IronFunctions
 
-  class RoutesWrapper
-    attr_accessor :routes
+  class NewTask
+    # Name of Docker image to use. This is optional and can be used to override the image defined at the group level.
+    attr_accessor :image
 
-    # Used to paginate results. If this is returned, pass it into the same query again to get more results.
-    attr_accessor :cursor
-
-    attr_accessor :error
+    # Payload for the task. This is what you pass into each task to make it do something.
+    attr_accessor :payload
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'routes' => :'routes',
-        :'cursor' => :'cursor',
-        :'error' => :'error'
+        :'image' => :'image',
+        :'payload' => :'payload'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'routes' => :'Array<Route>',
-        :'cursor' => :'String',
-        :'error' => :'ErrorBody'
+        :'image' => :'String',
+        :'payload' => :'String'
       }
     end
 
@@ -60,18 +57,12 @@ module IronFunctions
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'routes')
-        if (value = attributes[:'routes']).is_a?(Array)
-          self.routes = value
-        end
+      if attributes.has_key?(:'image')
+        self.image = attributes[:'image']
       end
 
-      if attributes.has_key?(:'cursor')
-        self.cursor = attributes[:'cursor']
-      end
-
-      if attributes.has_key?(:'error')
-        self.error = attributes[:'error']
+      if attributes.has_key?(:'payload')
+        self.payload = attributes[:'payload']
       end
 
     end
@@ -86,7 +77,7 @@ module IronFunctions
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @routes.nil?
+      return false if @image.nil?
       return true
     end
 
@@ -95,9 +86,8 @@ module IronFunctions
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          routes == o.routes &&
-          cursor == o.cursor &&
-          error == o.error
+          image == o.image &&
+          payload == o.payload
     end
 
     # @see the `==` method
@@ -109,7 +99,7 @@ module IronFunctions
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [routes, cursor, error].hash
+      [image, payload].hash
     end
 
     # Builds the object from hash

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **tasks_get**
-> TasksWrapper tasks_get(opts)
+> TaskWrapper tasks_get(opts)
 
 Get next task.
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TasksWrapper**](TasksWrapper.md)
+[**TaskWrapper**](TaskWrapper.md)
 
 ### Authorization
 

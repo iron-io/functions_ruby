@@ -73,7 +73,7 @@ api_instance = IronFunctions::RoutesApi.new
 
 app = "app_example" # String | name of the app.
 
-body = IronFunctions::NewRoutesWrapper.new # NewRoutesWrapper | Array of routes to post.
+body = IronFunctions::RoutesWrapper.new # RoutesWrapper | Array of routes to post.
 
 
 begin
@@ -90,7 +90,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app** | **String**| name of the app. | 
- **body** | [**NewRoutesWrapper**](NewRoutesWrapper.md)| Array of routes to post. | 
+ **body** | [**RoutesWrapper**](RoutesWrapper.md)| Array of routes to post. | 
 
 ### Return type
 
