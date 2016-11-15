@@ -24,10 +24,10 @@ limitations under the License.
 =end
 
 # $:.push File.expand_path("lib", __FILE__)
-require_relative "lib/functions_ruby/version"
+require_relative "lib/iron_functions/version"
 
 Gem::Specification.new do |s|
-  s.name        = "functions_ruby"
+  s.name        = "iron_functions"
   s.version     = IronFunctions::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/iron-io/functions_ruby"
   s.summary     = "Ruby gem for IronFunctions"
   s.description = "Ruby gem for IronFunctions."
-  s.license     = "Apache 2.0"
+  s.license     = "Apache-2.0"
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
   s.add_runtime_dependency 'json', '~> 1.8', '>= 1.8.3'
