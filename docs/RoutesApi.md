@@ -58,7 +58,7 @@ No authorization required
 
 
 # **apps_app_routes_post**
-> RoutesWrapper apps_app_routes_post(app, body)
+> RouteWrapper apps_app_routes_post(app, body)
 
 Create new Route
 
@@ -73,7 +73,7 @@ api_instance = IronFunctions::RoutesApi.new
 
 app = "app_example" # String | name of the app.
 
-body = IronFunctions::RoutesWrapper.new # RoutesWrapper | Array of routes to post.
+body = IronFunctions::RouteWrapper.new # RouteWrapper | One route to post.
 
 
 begin
@@ -90,11 +90,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app** | **String**| name of the app. | 
- **body** | [**RoutesWrapper**](RoutesWrapper.md)| Array of routes to post. | 
+ **body** | [**RouteWrapper**](RouteWrapper.md)| One route to post. | 
 
 ### Return type
 
-[**RoutesWrapper**](RoutesWrapper.md)
+[**RouteWrapper**](RouteWrapper.md)
 
 ### Authorization
 
