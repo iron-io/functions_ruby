@@ -25,27 +25,21 @@ require 'date'
 
 module IronFunctions
 
-  class App
-    # Name of this app. Must be different than the image name. Can ony contain alphanumeric, -, and _.
-    attr_accessor :name
-
-    # Application configuration
-    attr_accessor :config
+  class Version
+    attr_accessor :version
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name',
-        :'config' => :'config'
+        :'version' => :'version'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'name' => :'String',
-        :'config' => :'Hash<String, String>'
+        :'version' => :'String'
       }
     end
 
@@ -57,14 +51,8 @@ module IronFunctions
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'config')
-        if (value = attributes[:'config']).is_a?(Array)
-          self.config = value
-        end
+      if attributes.has_key?(:'version')
+        self.version = attributes[:'version']
       end
 
     end
@@ -87,8 +75,7 @@ module IronFunctions
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name &&
-          config == o.config
+          version == o.version
     end
 
     # @see the `==` method
@@ -100,7 +87,7 @@ module IronFunctions
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, config].hash
+      [version].hash
     end
 
     # Builds the object from hash

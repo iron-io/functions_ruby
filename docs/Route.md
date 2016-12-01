@@ -9,6 +9,9 @@ Name | Type | Description | Notes
 **headers** | **String** | Map of http headers that will be sent with the response | [optional] 
 **memory** | **Integer** | Max usable memory for this route (MiB). | [optional] 
 **type** | **String** | Route type | [optional] 
+**format** | **String** | Payload format sent into function. | [optional] 
+**max_concurrency** | **Integer** | Maximum number of hot containers concurrency | [optional] 
 **config** | **Hash&lt;String, String&gt;** | Route configuration - overrides application configuration | [optional] 
+**timeout** | **Integer** | Timeout for executions of this route. Value in Seconds | [optional] 
 
 

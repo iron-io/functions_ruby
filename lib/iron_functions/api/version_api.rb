@@ -24,32 +24,32 @@ limitations under the License.
 require "uri"
 
 module IronFunctions
-  class TasksApi
+  class VersionApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
 
-    # Get next task.
-    # Gets the next task in the queue, ready for processing. Consumers should start processing tasks in order. No other consumer can retrieve this task.
+    # Get daemon version.
+    # 
     # @param [Hash] opts the optional parameters
-    # @return [TaskWrapper]
-    def tasks_get(opts = {})
-      data, _status_code, _headers = tasks_get_with_http_info(opts)
+    # @return [Version]
+    def version_get(opts = {})
+      data, _status_code, _headers = version_get_with_http_info(opts)
       return data
     end
 
-    # Get next task.
-    # Gets the next task in the queue, ready for processing. Consumers should start processing tasks in order. No other consumer can retrieve this task.
+    # Get daemon version.
+    # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(TaskWrapper, Fixnum, Hash)>] TaskWrapper data, response status code and response headers
-    def tasks_get_with_http_info(opts = {})
+    # @return [Array<(Version, Fixnum, Hash)>] Version data, response status code and response headers
+    def version_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TasksApi.tasks_get ..."
+        @api_client.config.logger.debug "Calling API: VersionApi.version_get ..."
       end
       # resource path
-      local_var_path = "/tasks".sub('{format}','json')
+      local_var_path = "/version".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -77,9 +77,9 @@ module IronFunctions
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'TaskWrapper')
+        :return_type => 'Version')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TasksApi#tasks_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: VersionApi#version_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

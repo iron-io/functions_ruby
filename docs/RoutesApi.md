@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**apps_app_routes_post**](RoutesApi.md#apps_app_routes_post) | **POST** /apps/{app}/routes | Create new Route
 [**apps_app_routes_route_delete**](RoutesApi.md#apps_app_routes_route_delete) | **DELETE** /apps/{app}/routes/{route} | Deletes the route
 [**apps_app_routes_route_get**](RoutesApi.md#apps_app_routes_route_get) | **GET** /apps/{app}/routes/{route} | Gets route by name
+[**apps_app_routes_route_put**](RoutesApi.md#apps_app_routes_route_put) | **PUT** /apps/{app}/routes/{route} | Update a Route
 
 
 # **apps_app_routes_get**
@@ -190,6 +191,59 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app** | **String**| Name of app for this set of routes. | 
  **route** | **String**| Route name | 
+
+### Return type
+
+[**RouteWrapper**](RouteWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **apps_app_routes_route_put**
+> RouteWrapper apps_app_routes_route_put(app, route, body)
+
+Update a Route
+
+Update a route
+
+### Example
+```ruby
+# load the gem
+require 'iron_functions'
+
+api_instance = IronFunctions::RoutesApi.new
+
+app = "app_example" # String | name of the app.
+
+route = "route_example" # String | route path.
+
+body = IronFunctions::RouteWrapper.new # RouteWrapper | One route to post.
+
+
+begin
+  #Update a Route
+  result = api_instance.apps_app_routes_route_put(app, route, body)
+  p result
+rescue IronFunctions::ApiError => e
+  puts "Exception when calling RoutesApi->apps_app_routes_route_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app** | **String**| name of the app. | 
+ **route** | **String**| route path. | 
+ **body** | [**RouteWrapper**](RouteWrapper.md)| One route to post. | 
 
 ### Return type
 

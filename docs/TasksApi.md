@@ -8,11 +8,11 @@ Method | HTTP request | Description
 
 
 # **tasks_get**
-> TaskWrapper tasks_get(opts)
+> TaskWrapper tasks_get
 
 Get next task.
 
-Gets the next task in the queue, ready for processing. Titan may return <=n tasks. Consumers should start processing tasks in order. Each returned task is set to `status` \"running\" and `started_at` is set to the current time. No other consumer can retrieve this task.
+Gets the next task in the queue, ready for processing. Consumers should start processing tasks in order. No other consumer can retrieve this task.
 
 ### Example
 ```ruby
@@ -21,13 +21,9 @@ require 'iron_functions'
 
 api_instance = IronFunctions::TasksApi.new
 
-opts = { 
-  n: 1 # Integer | Number of tasks to return.
-}
-
 begin
   #Get next task.
-  result = api_instance.tasks_get(opts)
+  result = api_instance.tasks_get
   p result
 rescue IronFunctions::ApiError => e
   puts "Exception when calling TasksApi->tasks_get: #{e}"
@@ -35,10 +31,7 @@ end
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **n** | **Integer**| Number of tasks to return. | [optional] [default to 1]
+This endpoint does not need any parameter.
 
 ### Return type
 
