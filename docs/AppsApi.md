@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apps_app_delete**](AppsApi.md#apps_app_delete) | **DELETE** /apps/{app} | Delete an app.
 [**apps_app_get**](AppsApi.md#apps_app_get) | **GET** /apps/{app} | Get information for a app.
-[**apps_app_put**](AppsApi.md#apps_app_put) | **PUT** /apps/{app} | Create/update a app.
+[**apps_app_patch**](AppsApi.md#apps_app_patch) | **PATCH** /apps/{app} | Updates an app.
 [**apps_get**](AppsApi.md#apps_get) | **GET** /apps | Get all app names.
 [**apps_post**](AppsApi.md#apps_post) | **POST** /apps | Post new app
 
@@ -104,10 +104,10 @@ No authorization required
 
 
 
-# **apps_app_put**
-> AppWrapper apps_app_put(app, body)
+# **apps_app_patch**
+> AppWrapper apps_app_patch(app, body)
 
-Create/update a app.
+Updates an app.
 
 You can set app level settings here. 
 
@@ -124,11 +124,11 @@ body = IronFunctions::AppWrapper.new # AppWrapper | App to post.
 
 
 begin
-  #Create/update a app.
-  result = api_instance.apps_app_put(app, body)
+  #Updates an app.
+  result = api_instance.apps_app_patch(app, body)
   p result
 rescue IronFunctions::ApiError => e
-  puts "Exception when calling AppsApi->apps_app_put: #{e}"
+  puts "Exception when calling AppsApi->apps_app_patch: #{e}"
 end
 ```
 

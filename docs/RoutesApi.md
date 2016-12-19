@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**apps_app_routes_post**](RoutesApi.md#apps_app_routes_post) | **POST** /apps/{app}/routes | Create new Route
 [**apps_app_routes_route_delete**](RoutesApi.md#apps_app_routes_route_delete) | **DELETE** /apps/{app}/routes/{route} | Deletes the route
 [**apps_app_routes_route_get**](RoutesApi.md#apps_app_routes_route_get) | **GET** /apps/{app}/routes/{route} | Gets route by name
-[**apps_app_routes_route_put**](RoutesApi.md#apps_app_routes_route_put) | **PUT** /apps/{app}/routes/{route} | Update a Route
+[**apps_app_routes_route_patch**](RoutesApi.md#apps_app_routes_route_patch) | **PATCH** /apps/{app}/routes/{route} | Update a Route
 
 
 # **apps_app_routes_get**
@@ -63,7 +63,7 @@ No authorization required
 
 Create new Route
 
-Create a new route
+Create a new route in an app, if app doesn't exists, it creates the app
 
 ### Example
 ```ruby
@@ -207,8 +207,8 @@ No authorization required
 
 
 
-# **apps_app_routes_route_put**
-> RouteWrapper apps_app_routes_route_put(app, route, body)
+# **apps_app_routes_route_patch**
+> RouteWrapper apps_app_routes_route_patch(app, route, body)
 
 Update a Route
 
@@ -230,10 +230,10 @@ body = IronFunctions::RouteWrapper.new # RouteWrapper | One route to post.
 
 begin
   #Update a Route
-  result = api_instance.apps_app_routes_route_put(app, route, body)
+  result = api_instance.apps_app_routes_route_patch(app, route, body)
   p result
 rescue IronFunctions::ApiError => e
-  puts "Exception when calling RoutesApi->apps_app_routes_route_put: #{e}"
+  puts "Exception when calling RoutesApi->apps_app_routes_route_patch: #{e}"
 end
 ```
 
