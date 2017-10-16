@@ -9,8 +9,10 @@ Name | Type | Description | Notes
 **memory** | **Integer** | Max usable memory for this route (MiB). | [optional] 
 **type** | **String** | Route type | [optional] 
 **format** | **String** | Payload format sent into function. | [optional] 
-**max_concurrency** | **Integer** | Maximum number of hot containers concurrency | [optional] 
+**max_concurrency** | **Integer** | Maximum number of hot functions concurrency | [optional] 
 **config** | **Hash&lt;String, String&gt;** | Route configuration - overrides application configuration | [optional] 
 **timeout** | **Integer** | Timeout for executions of this route. Value in Seconds | [optional] 
+**idle_timeout** | **Integer** | Hot functions idle timeout before termination. Value in Seconds | [optional] 
+**jwt_key** | **String** | Signing key for JWT | [optional] 
 
 
